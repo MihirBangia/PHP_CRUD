@@ -1,4 +1,6 @@
-<?php include('../DB_Files/adminverify.php'); ?>
+<?php include('../DB_Files/adminverify.php');
+ session_start();
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,9 +17,11 @@
 </head>
 
 <body>
-    <h1>Admin Panel</h1> <br> <hr>
+    <h1>Welcome <?php echo $_SESSION['admin']?></h1> <br> <hr>
     <a href="addproducts.php"><button class="btn btn-primary">Add Products</button></a>
-    <a href="../DB_Files/logout.php"><button class="btn btn-danger">Logout</button></a> <br> <hr>
+    <a href="./brands.php"><button class="btn btn-dark">Brands</button></a> 
+    <a href="../DB_Files/logout.php"><button class="btn btn-danger">Logout</button></a> 
+    <br> <hr>
     <table class="table">
         <thead>
             <tr>
